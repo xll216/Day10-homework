@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hi0703@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="hi0703">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="blog"/>
+    <schema id="4" parent="1" name="crm"/>
+    <schema id="5" parent="1" name="demo"/>
+    <schema id="6" parent="1" name="hellossh"/>
+    <schema id="7" parent="1" name="hitest"/>
+    <schema id="8" parent="1" name="homework"/>
+    <schema id="9" parent="1" name="information_schema"/>
+    <schema id="10" parent="1" name="java1"/>
+    <schema id="11" parent="1" name="javademo"/>
+    <schema id="12" parent="1" name="jdbcdemo"/>
+    <schema id="13" parent="1" name="lanou"/>
+    <schema id="14" parent="1" name="lanoujava"/>
+    <schema id="15" parent="1" name="lanoumusic"/>
+    <schema id="16" parent="1" name="mall"/>
+    <schema id="17" parent="1" name="music"/>
+    <schema id="18" parent="1" name="mysql"/>
+    <schema id="19" parent="1" name="performance_schema"/>
+    <schema id="20" parent="1" name="sys"/>
+    <schema id="21" parent="1" name="Xiao"/>
+    <schema id="22" parent="1" name="xiaocrm"/>
+    <table id="23" parent="2" name="Category"/>
+    <table id="24" parent="2" name="Categorys_Items"/>
+    <table id="25" parent="2" name="Classes"/>
+    <table id="26" parent="2" name="Customer"/>
+    <table id="27" parent="2" name="Department"/>
+    <table id="28" parent="2" name="IDCard"/>
+    <table id="29" parent="2" name="Item"/>
+    <table id="30" parent="2" name="Manager"/>
+    <table id="31" parent="2" name="Orders"/>
+    <table id="32" parent="2" name="Person"/>
+    <table id="33" parent="2" name="Student"/>
+    <table id="34" parent="2" name="classz"/>
+    <table id="35" parent="2" name="stu"/>
+    <table id="36" parent="2" name="studentz"/>
+    <column id="37" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="38" parent="23" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="39" parent="23" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="24" name="category_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="24" name="item_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="42" parent="24" name="FK3t50f38vbb89clr24o17832me">
+      <ColNames>item_id</ColNames>
+    </index>
+    <key id="43" parent="24" name="PRIMARY">
+      <ColNames>category_id
+item_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="44" parent="24" name="FK5jtyiadktal6b6dtxqfjc7pac">
+      <ColNames>category_id</ColNames>
+      <RefSchemaName>hi0703</RefSchemaName>
+      <RefTableName>Category</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="45" parent="24" name="FK3t50f38vbb89clr24o17832me">
+      <ColNames>item_id</ColNames>
+      <RefSchemaName>hi0703</RefSchemaName>
+      <RefTableName>Item</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="46" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="47" parent="25" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="48" parent="25" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="49" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="50" parent="26" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="51" parent="26" name="loginName">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="52" parent="26" name="password">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="53" parent="26" name="gender">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="54" parent="26" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="56" parent="27" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="57" parent="27" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="28" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="59" parent="28" name="number">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="60" parent="28" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="61" parent="29" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="62" parent="29" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="63" parent="29" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="64" parent="30" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="30" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="66" parent="30" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="67" parent="30" name="FKmr5psdgg2rthwgemrklmrmsh5">
+      <ColNames>id</ColNames>
+      <RefSchemaName>hi0703</RefSchemaName>
+      <RefTableName>Department</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="68" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="69" parent="31" name="orderNumber">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="70" parent="31" name="price">
+      <Position>3</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="71" parent="31" name="startDate">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="72" parent="31" name="customer_id">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="73" parent="31" name="FKhwn935tudm12n4ihi91mnm0w5">
+      <ColNames>customer_id</ColNames>
+    </index>
+    <key id="74" parent="31" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="75" parent="31" name="FKhwn935tudm12n4ihi91mnm0w5">
+      <ColNames>customer_id</ColNames>
+      <RefSchemaName>hi0703</RefSchemaName>
+      <RefTableName>Customer</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="76" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="77" parent="32" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="78" parent="32" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="79" parent="32" name="idCard_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="80" parent="32" name="UK_mixiwgf4r5pnew7ddfikg0qw1">
+      <ColNames>idCard_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="81" parent="32" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="82" parent="32" name="UK_mixiwgf4r5pnew7ddfikg0qw1">
+      <ColNames>idCard_id</ColNames>
+      <UnderlyingIndexName>UK_mixiwgf4r5pnew7ddfikg0qw1</UnderlyingIndexName>
+    </key>
+    <foreign-key id="83" parent="32" name="FKf7b7qncqxbp7a4gq8sfgojjud">
+      <ColNames>idCard_id</ColNames>
+      <RefSchemaName>hi0703</RefSchemaName>
+      <RefTableName>IDCard</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="84" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="85" parent="33" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="86" parent="33" name="classes_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="87" parent="33" name="FKcn93abnbd89vu7jyxsr4wj69p">
+      <ColNames>classes_id</ColNames>
+    </index>
+    <key id="88" parent="33" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="89" parent="33" name="FKcn93abnbd89vu7jyxsr4wj69p">
+      <ColNames>classes_id</ColNames>
+      <RefSchemaName>hi0703</RefSchemaName>
+      <RefTableName>Classes</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="90" parent="34" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="91" parent="34" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="92" parent="34" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="93" parent="35" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="94" parent="35" name="sname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="95" parent="35" name="gender">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="96" parent="35" name="age">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="97" parent="35" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="98" parent="36" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="99" parent="36" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="100" parent="36" name="classes_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="101" parent="36" name="FKrml2rcxid34hotr89ctbdfm3q">
+      <ColNames>classes_id</ColNames>
+    </index>
+    <key id="102" parent="36" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="103" parent="36" name="FKrml2rcxid34hotr89ctbdfm3q">
+      <ColNames>classes_id</ColNames>
+      <RefSchemaName>hi0703</RefSchemaName>
+      <RefTableName>classz</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
